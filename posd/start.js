@@ -60,3 +60,8 @@ if (systemd.start("udisks2")) {
 } else {
     loader.warn("Failed to start UNIX Disks Manager")
 }
+
+loader.start("Starting powerOS Workspace...");
+const shell = require('./shell');
+loader.succeed("Started powerOS Workspace");
+shell();
